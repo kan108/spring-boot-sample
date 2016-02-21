@@ -20,7 +20,6 @@ public class CustomerRestController {
 	@Autowired
 	private CustomerService customerService;
 	
-	  // (1)
     @RequestMapping(method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public List<Customer> getCustomers() {
