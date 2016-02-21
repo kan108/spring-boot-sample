@@ -1,0 +1,13 @@
+spring:
+  profle:
+    ## (1)
+    active: dev
+---
+spring:
+    ## (2)
+    profiles: dev
+    datasource:
+      driverClassName: org.h2.Driver
+      url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+      username: sa
+      password:
