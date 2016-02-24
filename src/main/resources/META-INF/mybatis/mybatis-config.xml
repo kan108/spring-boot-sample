@@ -18,10 +18,12 @@
 -->
     </settings>
 
-    <typeAliases>
-    </typeAliases>
+<!-- パッケージを設定することでパッケージ名を省ける -->
+<typeAliases>
+ <package name="com.example.test.domain.repository"/>
+</typeAliases>
 
-    <typeHandlers>
-    </typeHandlers>
+<!--     <typeHandlers> -->
+<!--     </typeHandlers> -->
 
 </configuration>
