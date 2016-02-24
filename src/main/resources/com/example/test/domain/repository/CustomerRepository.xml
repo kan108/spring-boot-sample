@@ -1,17 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- (1)  -->
+<!-- (1) -->
 <mapper namespace="com.example.test.domain.repository.CustomerRepository">
 
- <select id="findAll" resultType="com.example.test.domain.model.Customer">
-        SELECT
-            id,
-            first_name,
-            last_name
-        FROM
-            customers
-    </select>
+	<select id="findAll" resultType="com.example.test.domain.model.Customer">
+		SELECT
+			id,
+			first_name,
+			last_name
+		FROM
+			customers
+	</select>
 
+
+	<select id="findOne" resultType="com.example.test.domain.model.Customer">
+		SELECT
+			id,
+			first_name,
+			last_name
+		FROM
+			customers
+		WHERE id = #{id}
+	</select>
 
 </mapper>

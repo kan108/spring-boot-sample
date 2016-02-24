@@ -12,15 +12,22 @@ import com.example.test.domain.repository.CustomerRepository;
 @Service
 @Transactional
 public class CustomerService {
-	
+
 	@Autowired
 	private CustomerRepository customerRepository;
 
 	public List<Customer> findAll() {
-		
+
 		List<Customer> customers = customerRepository.findAll();
 		return customers;
-		
+
 	}
-	
+
+	public Customer findOne(String id) {
+
+		Customer customer = customerRepository.findOne(id);
+		return customer;
+
+	}
+
 }

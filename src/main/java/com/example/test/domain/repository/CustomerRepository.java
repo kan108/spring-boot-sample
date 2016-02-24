@@ -7,5 +7,7 @@ import com.example.test.domain.model.Customer;
 public interface CustomerRepository {
 	
 	List<Customer> findAll();
+	
+	Customer findOne(String id);
 
 }
