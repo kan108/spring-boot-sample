@@ -20,6 +20,10 @@ public class CustomerRestController {
 	@Autowired
 	private CustomerService customerService;
 	
+	/**
+	 * ユーザ情報を全件取得する。
+	 * @return
+	 */
     @RequestMapping(method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public List<Customer> getCustomers() {
@@ -29,7 +33,11 @@ public class CustomerRestController {
     	
     }
 	
-    
+    /**
+     * IDを指定して1件のユーザ情報を取得する
+     * @param id
+     * @return
+     */
     @RequestMapping(value="{id}", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public Customer getCustomer(@PathVariable("id") String id) {
